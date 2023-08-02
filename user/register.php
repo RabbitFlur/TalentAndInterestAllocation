@@ -30,10 +30,22 @@
       <div id="phoneError" class="error"></div>
     </div>
 
+    <div class="input-container">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Masukkan password" required class="input-text">
+    </div>
+
+    <div class="input-container">
+      <label for="confirmPassword">Konfirmasi Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Masukkan ulang password" required class="input-text">
+      <div id="passwordError" class="error"></div>
+    </div>
+
     <button type="submit" id="lanjut" name="lanjut">Lanjut</button>
   </form>
   </div> 
   <script src="../modules/autofill.js"></script>
+  <script src="../modules/validateForm.js"></script>
   
 <?php include '../template/footer.php'; ?>
 
