@@ -1,20 +1,5 @@
 <?php include '../template/header.php'; ?>
 <div class="profile">
-<style>
-#register-link {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
-  color: #183885;
-}
-#register-link:hover {
-  color: #f77c43;
-}
-
-</style>
 <h2><img src="../image/tia.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
 <form>
 <div class="input-container">

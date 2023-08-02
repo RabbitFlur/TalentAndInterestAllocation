@@ -176,5 +176,17 @@ label {
   text-align: justify;
 }
 
+#register-link {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #183885;
+}
+#register-link:hover {
+  color: #f77c43;
+}
 
 
