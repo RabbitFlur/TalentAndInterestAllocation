@@ -7,6 +7,7 @@
   <link rel="icon" href="../image/logo.png" type="image/png">
   <title>Talent and Interest Allocation</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <style type="text/css">
 		body
