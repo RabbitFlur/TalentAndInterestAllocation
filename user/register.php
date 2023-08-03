@@ -3,8 +3,7 @@
   <div class="profile">
   <h2 >Isikan Biodata Anda</h2>
 
-  <form id="pengguna" onsubmit="return validateForm()" method="post" action="lanjut.php">
-  <!-- <form id="pengguna" method="post" action="lanjut.php"> -->
+  <form id="pengguna" method="post" action="lanjut.php">
     <div class="input-container">
       <label for="nama">Nama</label>
       <input type="text" id="nama" name="nama" placeholder="Tuliskan nama lengkap" required class="input-text">
@@ -32,20 +31,19 @@
 
     <div class="input-container">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Masukkan password" required class="input-text">
+      <input type="password" id="password" name="password" placeholder="Masukkan password" required data-ignore="true">
     </div>
 
     <div class="input-container">
       <label for="confirmPassword">Konfirmasi Password</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Masukkan ulang password" required class="input-text">
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Masukkan ulang password" required data-ignore="true">
       <div id="passwordError" class="error"></div>
     </div>
 
     <button type="submit" id="lanjut" name="lanjut">Lanjut</button>
   </form>
   </div> 
-  <script src="../modules/autofill.js"></script>
-  <script src="../modules/validateForm.js"></script>
+  <script src="../modules/passwordvalidation.js" type="module"></script>
   
 <?php include '../template/footer.php'; ?>
 

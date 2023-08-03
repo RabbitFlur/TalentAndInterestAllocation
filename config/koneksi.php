@@ -3,7 +3,7 @@
 $host = "localhost"; // Ganti dengan nama host database Anda
 $username = "root"; // Ganti dengan nama pengguna database Anda
 $password = ""; // Ganti dengan kata sandi database Anda
-$database = "tia"; // Ganti dengan nama database Anda
+$database = "dbtia"; // Ganti dengan nama database Anda
 
 // Membuat koneksi ke database
 $conn = mysqli_connect($host, $username, $password, $database);

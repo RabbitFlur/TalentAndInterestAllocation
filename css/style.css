@@ -88,6 +88,13 @@ button:hover {
   background-color: #183881;
 }
 
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  color: #808080;
+  border: 1px solid #c0c0c0;
+}
+
 /* ---------------------------------------------- */
 
 .input-text {
@@ -189,4 +196,19 @@ label {
   color: #f77c43;
 }
 
+.alert {
+  background-color: #f44336; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  padding: 10px; /* Jarak isi ke tepi kotak */
+  border-radius: 4px; /* Lingkaran sudut kotak */
+  margin-bottom: 15px; /* Jarak antar elemen */
+  font-weight: bold; /* Tebal teks */
+  animation: fadeInOut 3s ease-in-out; /* Animasi muncul dan menghilang */
+}
+
+/* Animasi muncul dan menghilang */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; } /* Mulai dan akhir transparan (hilang) */
+  10%, 90% { opacity: 1; } /* Tengah-tengah transparan (muncul) */
+}
 
