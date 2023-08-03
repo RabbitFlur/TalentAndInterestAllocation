@@ -26,6 +26,7 @@ body {
   background-image: url("../image/cool.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .profile {
@@ -89,7 +90,7 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #e0e0e0;
+  background-color: #4d6baf;
   cursor: not-allowed;
   color: #808080;
   border: 1px solid #c0c0c0;
@@ -210,5 +211,62 @@ label {
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; } /* Mulai dan akhir transparan (hilang) */
   10%, 90% { opacity: 1; } /* Tengah-tengah transparan (muncul) */
+}
+
+
+/* Style modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 25%;
+  position: relative;
+}
+
+/* Tambahkan gaya CSS tambahan untuk mengatur tata letak pada ponsel */
+@media (max-width: 767px) {
+  .modal-content {
+    max-width: 100%; 
+  }
+}
+
+/* .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+} */
+
+.close {
+  color: #ff0000; /* Warna font merah */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
