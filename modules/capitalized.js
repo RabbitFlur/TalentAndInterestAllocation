@@ -39,3 +39,4 @@ const inputTextElements = document.querySelectorAll('.input-text');
 inputTextElements.forEach(element => {
   element.addEventListener('input', capitalizeInputText);
 });
+

@@ -7,7 +7,7 @@
       <div id="nimError" class="error"></div>
 </div>
 <div class="input-container">
-      <input type="password" id="password" name="password" placeholder="Masukkan Password" required data-ignore="true" value="" autocomplete="new-password">
+      <input type="password" id="password" name="password" placeholder="Masukkan Password" required class="input-pass" data-ignore="true" value="" autocomplete="new-password">
       <div id="passError" class="error"></div><br>
       <span id="register-link" onclick="register()">Register</span>
 </div>

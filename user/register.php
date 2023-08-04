@@ -31,12 +31,18 @@
 
     <div class="input-container">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Masukkan password" required data-ignore="true" autocomplete="new-password">
+      <input type="password" id="password" name="password" placeholder="Masukkan password" required class="input-pass" data-ignore="true" autocomplete="new-password">
+      <span class="toggle-password" onclick="togglePasswordVisibility('password')"> 
+      <img src="../image/eye-closed.png" alt="Intip Password" id="eyeIcon">
+      </span>
     </div>
 
     <div class="input-container">
       <label for="confirmPassword">Konfirmasi Password</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Masukkan ulang password" required data-ignore="true" autocomplete="off">
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Masukkan ulang password" required class="input-pass" data-ignore="true" autocomplete="off">
+      <span class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')">
+      <img src="../image/eye-closed.png" alt="Intip Password" id="eyeIconConfirm">
+      </span>
       <div id="errorModal" class="modal">
         <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -48,6 +54,7 @@
     <button type="submit" id="lanjut" name="lanjut" onclick="return validateForm()">Daftar</button>
   </form>
   <script src="../modules/formValidation.js"></script>
+  <script src="../modules/togglePassword.js"></script>
   </div> 
   
 <?php include '../template/footer.php'; ?>
