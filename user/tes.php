@@ -1,5 +1,7 @@
 <?php include '../template/header.php'; ?>
-
+<title>Answer The Question</title>
+</head>
+<body>
 <div class="form-wrapper">
 <form id="questionForm">
 

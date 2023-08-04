@@ -1,7 +1,10 @@
 <?php include '../template/header.php'; ?>
+<title>Talent and Interest Allocation</title>
+</head>
+<body>
 <div class="profile">
 <h2><img src="../image/tia.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
-<form>
+<form method="post" action="../controller/login_process.php">
 <div class="input-container">
       <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required class="input-text" data-ignore="true" value="" autocomplete="off">
       <div id="nimError" class="error"></div>

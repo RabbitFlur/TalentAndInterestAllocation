@@ -16,5 +16,5 @@ window.onload = function() {
 };
 // Mengatur redirect menggunakan JavaScript setelah 3 detik
 setTimeout(function() {
-  window.location.href = "home.php";
+  window.location.href = "../user/home.php";
 }, 3000);

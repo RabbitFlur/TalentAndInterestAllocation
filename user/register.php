@@ -1,9 +1,11 @@
 <?php include '../template/header.php'; ?>
-
+<title>Register Account</title>
+</head>
+<body>
   <div class="profile">
   <h2><img src="../image/signup.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
 
-  <form id="pengguna" method="post" action="lanjut.php">
+  <form id="pengguna" method="post" action="../controller/lanjut.php">
     <div class="input-container">
       <label for="nama">Nama</label>
       <input type="text" id="nama" name="nama" placeholder="Tuliskan nama lengkap" required class="input-text" autocomplete="off">
