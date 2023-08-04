@@ -9,16 +9,14 @@ if (isset($_POST['lanjut'])) {
 
   // Menjalankan prepared statement
   if (mysqli_stmt_execute($stmt)) {
-    // Data berhasil disimpan, alihkan ke halaman berikutnya
+    // Data berhasil disimpan
+    include 'success_message.html';
+
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 
-    // Ubah lokasi halaman berikutnya sesuai kebutuhan (misalnya: form_pertanyaan.php)
-    header("Location: home.php");
-    exit(); // Pastikan exit() digunakan setelah header() untuk mencegah eksekusi lebih lanjut pada halaman ini.
   } else {
-    echo 'gagal menyimpan data. Error: ' . mysqli_error($conn);
+    echo '<p style="background-color: #f44336; color: white; padding: 10px;">Gagal menyimpan data. Error: ' . mysqli_error($conn) . '</p>';
   }
 }
 ?>
-

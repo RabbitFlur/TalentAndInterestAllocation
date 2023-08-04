@@ -1,17 +1,3 @@
-// function validateForm() {
-//   var password = document.getElementById("password").value;
-//   var confirmPassword = document.getElementById("confirmPassword").value;
-
-//   if (password !== confirmPassword) {
-//     alert("Password dan konfirmasi password harus sama.");
-//     return false;
-//   } else {
-//     return true;
-//   }
-// }
-
-
-
 function validateForm() {
   var password = document.getElementById("password").value;
   var confirmPassword = document.getElementById("confirmPassword").value;
