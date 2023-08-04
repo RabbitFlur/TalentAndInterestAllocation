@@ -1,7 +1,7 @@
 <?php include '../template/header.php'; ?>
 
   <div class="profile">
-  <h2><img src="../image/24727098.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
+  <h2><img src="../image/signup.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
 
   <form id="pengguna" method="post" action="lanjut.php">
     <div class="input-container">
