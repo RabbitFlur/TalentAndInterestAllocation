@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="form-wrapper">
-<form id="questionForm">
+<form id="questionForm" action="../controller/outputjawaban.php" method="POST">
 
   <fieldset class="fieldset-container active">
     <legend>Kelompok Pertanyaan 1</legend>
@@ -248,14 +248,15 @@
         <label for="ia-4n">Tidak</label>
       </div>
     </div>
+    <input type="hidden" name="hasil" value="<?php echo $finalResult ? 'TRUE' : 'FALSE'; ?>">
     <button type="submit" id="kirim" name="kirim">Kirim</button>
   </fieldset>
 
+  <!-- <div id="output"></div> -->
 
 </form>
 <script src="../modules/hidden.js"></script>
 <script src="../modules/nextfieldset.js"></script>
-<script type="module" src="main.js"></script>
 </div>
 
 <?php include '../template/footer.php'; ?>

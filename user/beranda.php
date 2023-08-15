@@ -9,7 +9,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 ?>
 
 <?php include '../template/header.php'; ?>
-    <title>Halaman Beranda</title>
+<title>Beranda</title>
 </head>
 <body>
     <h2>Selamat datang di halaman beranda, <?php echo $_SESSION['nama']; ?>!</h2>
