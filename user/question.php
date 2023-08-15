@@ -5,6 +5,7 @@
 <div class="form-wrapper">
 <form id="questionForm" action="../controller/outputjawaban.php" method="POST">
 
+<!-- _______________FIELDSET 1________________ -->
   <fieldset class="fieldset-container active">
     <legend>Kelompok Pertanyaan 1</legend>
     <div class="question-group">
@@ -43,9 +44,13 @@
         <label for="l-4n">Tidak</label>
       </div>
     </div>
+    <div class="output"></div>
     <button type="button" class="next-button">Next</button>
   </fieldset>
+<!-- ----------------------------------------- -->
 
+
+<!-- _______________FIELDSET 2________________ -->
   <fieldset class="fieldset-container">
     <legend>Kelompok Pertanyaan 2</legend>
     <div class="question-group">
@@ -84,9 +89,13 @@
         <label for="lm-4n">Tidak</label>
       </div>
     </div>
+    <div class="output"></div>
     <button type="button" class="next-button">Next</button>
   </fieldset>
+<!-- ----------------------------------------- -->
 
+
+<!-- _______________FIELDSET 3________________ -->
   <fieldset class="fieldset-container">
     <legend>Kelompok Pertanyaan 3</legend>
     <div class="question-group">
@@ -125,9 +134,13 @@
         <label for="k-4n">Tidak</label>
       </div>
     </div>
+    <div class="output"></div>
     <button type="button" class="next-button">Next</button>
   </fieldset> 
+<!-- ----------------------------------------- -->
 
+
+<!-- _______________FIELDSET 4________________ -->
   <fieldset class="fieldset-container">
     <legend>Kelompok Pertanyaan 4</legend>
     <div class="question-group">
@@ -166,9 +179,13 @@
         <label for="m-4n">Tidak</label>
       </div>
     </div>
+    <div class="output"></div>
     <button type="button" class="next-button">Next</button>
   </fieldset>
+<!-- ----------------------------------------- -->
 
+
+<!-- _______________FIELDSET 5________________ -->
   <fieldset class="fieldset-container">
     <legend>Kelompok Pertanyaan 5</legend>
     <div class="question-group">
@@ -207,9 +224,13 @@
         <label for="ier-4n">Tidak</label>
       </div>
     </div>
+    <div class="output"></div>
     <button type="button" class="next-button">Next</button>
   </fieldset>
+<!-- ----------------------------------------- -->
 
+
+<!-- _______________FIELDSET 6________________ -->
   <fieldset class="fieldset-container">
     <legend>Kelompok Pertanyaan 6</legend>
     <div class="question-group">
@@ -248,15 +269,15 @@
         <label for="ia-4n">Tidak</label>
       </div>
     </div>
-    <input type="hidden" name="hasil" value="<?php echo $finalResult ? 'TRUE' : 'FALSE'; ?>">
+    <div class="output"></div>
     <button type="submit" id="kirim" name="kirim">Kirim</button>
   </fieldset>
-
-  <!-- <div id="output"></div> -->
+<!-- ----------------------------------------- -->
 
 </form>
 <script src="../modules/hidden.js"></script>
 <script src="../modules/nextfieldset.js"></script>
+<script src="../modules/outputjawaban.js" type="module"></script>
 </div>
 
 <?php include '../template/footer.php'; ?>
