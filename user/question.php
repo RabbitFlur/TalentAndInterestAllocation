@@ -1,10 +1,26 @@
-<?php include '../template/header.php'; ?>
+<?php
+session_start();
+
+// Cek apakah pengguna sudah login atau belum
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    header("Location: home.php");
+    exit();
+}
+
+// Jika pengguna sudah login, Anda bisa mengakses data sesi seperti ID pengguna dan nama pengguna
+$user_id = $_SESSION['id'];
+$user_name = $_SESSION['nama'];
+
+// Sekarang Anda bisa menggunakan data ini dalam tampilan halaman pertanyaan
+?>
+
+<?php include '../template/header.php';?>
 <title>Answer The Question</title>
 </head>
 <body>
 <div class="form-wrapper">
 <form id="questionForm" action="hasiloutput.php" method="POST">
-
+<h6>Selamat datang di halaman beranda, <?php echo $user_name; ?>!</h6>
 <!-- _______________FIELDSET 1________________ -->
   <fieldset class="fieldset-container active">
     <legend>Kelompok Pertanyaan 1</legend>

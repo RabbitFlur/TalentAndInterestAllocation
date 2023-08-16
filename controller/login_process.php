@@ -21,6 +21,7 @@ if (isset($_POST['nim']) && isset($_POST['password'])) {
         // Login berhasil
         $row = mysqli_fetch_assoc($result);
         $_SESSION['logged_in'] = true;
+        $_SESSION['id'] = $row['id'];
         $_SESSION['nama'] = $row['nama'];
         header("location: $path/user/beranda.php");
         // header("Location: beranda.php"); 

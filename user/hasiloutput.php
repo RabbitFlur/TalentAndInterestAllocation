@@ -10,11 +10,22 @@
         if (outputsParam) {
             const outputs = outputsParam.split(',').map(output => output === 'true');
             const resultsDiv = document.getElementById('results');
-            
+
+            const kelompokPertanyaan = [
+                'Linguistik',
+                'Logis Matematis',
+                'Kinestetik',
+                'Musikal',
+                'Interpersonal',
+                'Intrapersonal'
+            ];
+
             outputs.forEach((outputValue, index) => {
-                const outputElement = document.createElement('p');
-                outputElement.textContent = `Kelompok Pertanyaan ${index + 1} Output: ${outputValue}`;
-                resultsDiv.appendChild(outputElement);
+                if (outputValue) {
+                    const outputElement = document.createElement('p');
+                    outputElement.textContent = `${kelompokPertanyaan[index]}`;
+                    resultsDiv.appendChild(outputElement);
+                }
             });
         }
     </script>
