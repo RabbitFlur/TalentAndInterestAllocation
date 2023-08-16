@@ -1,32 +1,11 @@
 <?php include '../template/header.php'; ?>
 <title>Hasil Output</title>
+
 </head>
 <body>
-    <div id="results"></div>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const outputsParam = urlParams.get('outputs');
-
-        if (outputsParam) {
-            const outputs = outputsParam.split(',').map(output => output === 'true');
-            const resultsDiv = document.getElementById('results');
-
-            const kelompokPertanyaan = [
-                'Linguistik',
-                'Logis Matematis',
-                'Kinestetik',
-                'Musikal',
-                'Interpersonal',
-                'Intrapersonal'
-            ];
-
-            outputs.forEach((outputValue, index) => {
-                if (outputValue) {
-                    const outputElement = document.createElement('p');
-                    outputElement.textContent = `${kelompokPertanyaan[index]}`;
-                    resultsDiv.appendChild(outputElement);
-                }
-            });
-        }
-    </script>
+    <div class="container">
+        <h1>Hasil Output</h1>
+        <div class="results" id="results"></div>
+    </div>
+    <script src="../modules/viewoutput.js"></script>
 <?php include '../template/footer.php'; ?>
