@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="form-wrapper">
-<form id="questionForm" action="../controller/outputjawaban.php" method="POST">
+<form id="questionForm" action="hasiloutput.php" method="POST">
 
 <!-- _______________FIELDSET 1________________ -->
   <fieldset class="fieldset-container active">

@@ -1,20 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const questionForm = document.getElementById("questionForm");
-  const submitButton = document.getElementById("kirim");
+const form = document.getElementById('questionForm');
+const fieldsets = form.querySelectorAll('.fieldset-container');
 
-  questionForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const fieldsets = questionForm.querySelectorAll(".fieldset-container");
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    const results = [];
-    fieldsets.forEach(function(fieldset) {
-      const radioButtons = fieldset.querySelectorAll('input[type="radio"][value="yes"]:checked');
-      results.push(radioButtons.length >= 3);
-    });
+  const allOutput = [];
 
-    const finalResult = results.every(result => result);
+  fieldsets.forEach((fieldset, index) => {
+    const output = fieldset.querySelector('.output');
+    const answers = fieldset.querySelectorAll(`input[type="radio"]:checked`);
+    const yesAnswers = Array.from(answers).filter(answer => answer.value === 'yes');
 
-    // Redirect to outputjawaban.php with the finalResult
-    window.location.href = `../controller/outputjawaban.php?result=${finalResult}`;
+    // Set output based on the logic: TRUE if at least 3 "yes" answers, otherwise FALSE
+    // const outputValue = yesAnswers.length >= 3;
+    // output.innerHTML = `Kelompok Pertanyaan ${index + 1} Output: ${outputValue}`;
+
+    const outputValue = yesAnswers.length >= 3;
+    allOutput.push(outputValue);
+  });
+  const nextPage = `hasiloutput.php?outputs=${allOutput.join(',')}`;
+  window.location.href = nextPage;
+
+  const url = 'save_output.php';
+  const data = { outputs: allOutput };
+
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(result => {
+    // Handle response from backend if needed
+  })
+  .catch(error => {
+    console.error('Error:', error);
   });
 });
