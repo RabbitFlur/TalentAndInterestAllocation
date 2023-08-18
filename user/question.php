@@ -20,10 +20,10 @@ $user_name = $_SESSION['nama'];
 <body>
 <div class="form-wrapper">
 <form id="questionForm" action="hasiloutput.php" method="POST">
-<h6>Selamat datang di halaman beranda, <?php echo $user_name; ?>!</h6>
+<h2><img src="../image/tia.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
 <!-- _______________FIELDSET 1________________ -->
   <fieldset class="fieldset-container active">
-    <legend>Kelompok Pertanyaan 1</legend>
+    <legend></legend>
     <div class="question-group">
       <label for="l-1">Berbagai tulisan suka anda baca; koran, majalah, merk mobil, stiker di angkutan kota, bahkan label produk</label><br>
       <div class="answer-options">
@@ -68,7 +68,7 @@ $user_name = $_SESSION['nama'];
 
 <!-- _______________FIELDSET 2________________ -->
   <fieldset class="fieldset-container">
-    <legend>Kelompok Pertanyaan 2</legend>
+    <legend></legend>
     <div class="question-group">
       <label for="lm-1">Kegiatan anda sehari-hari tersusun dengan rapi dan teratur </label><br>
       <div class="answer-options">
@@ -113,7 +113,7 @@ $user_name = $_SESSION['nama'];
 
 <!-- _______________FIELDSET 3________________ -->
   <fieldset class="fieldset-container">
-    <legend>Kelompok Pertanyaan 3</legend>
+    <legend></legend>
     <div class="question-group">
       <label for="k-1">Tidak cukup hanya melihat saja untuk mempelajari hal baru, anda lebih suka kalau bisa mengerjakannya langsung sendiri</label><br>
       <div class="answer-options">
@@ -158,7 +158,7 @@ $user_name = $_SESSION['nama'];
 
 <!-- _______________FIELDSET 4________________ -->
   <fieldset class="fieldset-container">
-    <legend>Kelompok Pertanyaan 4</legend>
+    <legend></legend>
     <div class="question-group">
       <label for="m-1">Sambil mengerjakan sesuatu, anda suka bersenandung atau bersiul</label><br>
       <div class="answer-options">
@@ -203,7 +203,7 @@ $user_name = $_SESSION['nama'];
 
 <!-- _______________FIELDSET 5________________ -->
   <fieldset class="fieldset-container">
-    <legend>Kelompok Pertanyaan 5</legend>
+    <legend></legend>
     <div class="question-group">
       <label for="ier-1">Jika ada masalah, anda lebih suka mendiskusikannya dengan orang lain daripada dipikirkan sendiri</label><br>
       <div class="answer-options">
@@ -248,7 +248,7 @@ $user_name = $_SESSION['nama'];
 
 <!-- _______________FIELDSET 6________________ -->
   <fieldset class="fieldset-container">
-    <legend>Kelompok Pertanyaan 6</legend>
+    <legend></legend>
     <div class="question-group">
       <label for="ia-1">Mengikuti seminar-seminar pengembangan diri sangat menarik minat anda</label><br>
       <div class="answer-options">

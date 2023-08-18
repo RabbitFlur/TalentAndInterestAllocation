@@ -324,9 +324,13 @@ label {
   text-align: center;
 }
 
-
 /* Ganti dengan path font yang sesuai */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Anton';
+  src: url('../fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .container {
     text-align: center;
@@ -334,8 +338,8 @@ label {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-family: 'Anton',cursive;
+    font-weight: normal;
     margin-bottom: 20px;
 }
 
@@ -347,13 +351,16 @@ h1 {
 }
 
 .result-item {
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  font-family: 'Anton', cursive;
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(57, 47, 146);
+  background: linear-gradient(225deg, rgba(255, 255, 255, 0.932), rgba(255, 159, 70, 0.199));
 }
 
 .icon {
@@ -365,3 +372,133 @@ h1 {
     font-size: 18px;
 }
 
+
+/* back-link */
+.back-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.384); /* Warna hitam semi-transparan */
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s; /* Efek transisi hover */
+}
+
+.back-link a {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  color: #dd4c4c; /* Warna tulisan putih */
+  transition: color 0.3s; /* Efek transisi hover pada warna tulisan */
+}
+
+.back-link a:hover {
+  color: #2335d3; /* Warna tulisan berubah saat dihover */
+}
+
+
+/* css halaman beranda */
+.homepage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.74);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.judul{
+  font-weight: bold;
+}
+
+.aligned-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  color: #333333;
+}
+
+p {
+  color: #666666;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.button-tes {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-tes:hover {
+  background-color: #2980b9;
+}
+
+.scroll-text-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-text {
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.logout-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logout-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
+.user-info h3,
+.history h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+  color: #3498db;
+}
+
+.user-info p {
+  margin: 10px 0;
+}
+.info-bubble {
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
