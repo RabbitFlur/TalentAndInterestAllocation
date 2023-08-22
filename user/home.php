@@ -1,6 +1,7 @@
 <?php include '../template/header.php'; ?>
 <title>Talent and Interest Allocation</title>
 </head>
+
 <body>
 <div class="profile">
 <h2><img src="../image/tia.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>

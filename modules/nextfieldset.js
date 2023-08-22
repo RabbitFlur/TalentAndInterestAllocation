@@ -27,7 +27,7 @@ function showNextFieldset() {
       nextFieldset.style.display = "block";
     }
   } else {
-    alert("Pilih minimal 4 opsi sebelum melanjutkan.");
+    alert("Anda belum menjawab semua pertanyaan");
   }
 }
 

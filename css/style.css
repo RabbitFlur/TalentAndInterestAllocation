@@ -408,14 +408,16 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.judul{
-  font-weight: bold;
+@font-face {
+  font-family: 'Kanit';
+  src: url('../fonts/Kanit-BoldItalic.ttf') format('truetype');
 }
 
-.aligned-text {
-  display: flex;
-  justify-content: space-between;
+.judul{
+  /* font-weight: bold; */
+  font-family: 'Kanit', Arial, sans-serif;
 }
+
 
 h2 {
   color: #333333;
@@ -431,11 +433,6 @@ table {
   margin-bottom: 20px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-}
 
 .button-tes {
   display: inline-block;
@@ -449,7 +446,7 @@ table {
 }
 
 .button-tes:hover {
-  background-color: #2980b9;
+  background-color: #1e74ad;
 }
 
 .scroll-text-container {
@@ -489,7 +486,7 @@ table {
   margin-top: 0;
   padding-bottom: 10px;
   border-bottom: 2px solid #3498db;
-  color: #3498db;
+  color: #0e3c5e;
 }
 
 .user-info p {
@@ -501,4 +498,24 @@ table {
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-row {
+  display: table-row;
+}
+
+.info-cell {
+  display: table-cell;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+.info-cell-left {
+  background-color: rgba(12, 101, 136, 0.247); /* Warna yang lebih gelap untuk kolom sebelah kiri */
 }

@@ -1,5 +1,5 @@
 <label for="menuprodi">Program Studi</label>
-    <select id="menuprodi" name="menuprodi" required class="input-text">
+    <select id="menuprodi" name="menuprodi" data-ignore="true" required class="input-text">
       <option value="" disabled selected>--Pilih Program Studi--</option>
       <option>Ekonomi Pembangunan</option>
       <option>Ekonomi & Perbankan Syariah</option>
@@ -17,7 +17,7 @@
       <option>Ilmu Komunikasi</option>
       <option>Perpustakaan</option>
       <option>Sosiologi</option>
-      <option>Sastra Inggis Bidang Minat Penerjemah</option>
+      <option>Sastra Inggris Bidang Minat Penerjemah</option>
       <option>Ilmu Hukum</option>
       <option>Pengelolaan Arsip & Rekaman Informasi</option>
       <option>Matematika</option>
@@ -52,7 +52,7 @@
     </select>
     
     <label for="menukabko">Asal Kabupaten/Kota</label>
-    <select id="menukabko" name="menukabko" required class="input-text">
+    <select id="menukabko" name="menukabko" data-ignore="true" required class="input-text">
       <option value="" disabled selected>--Pilih Asal Kabko--</option>
       <option>Kabupaten Agam</option>
       <option>Kabupaten Dharmasraya</option>

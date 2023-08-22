@@ -2,7 +2,7 @@
 session_start();
 
 //Tentukan server untuk lokasi path
-$path = $_SERVER['localhost'].'/TIA';
+include '../config/path.php';
 
 if (isset($_POST['nim']) && isset($_POST['password'])) {
     include '../config/koneksi.php'; // Memanggil file koneksi.php

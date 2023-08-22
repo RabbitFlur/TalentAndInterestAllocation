@@ -55,15 +55,28 @@ td {
   padding: 8px;
   text-align: left;
 }
+
+
 </style>
 <body>
     <div class="homepage">
         <div class="info-bubble">
             <div class="user-info">
                 <h3 class="judul">Data Pengguna</h3>
-                <p class="aligned-text"><span><strong>Nama </strong></span><?php echo $row_pengguna['nama']; ?></p>
-                <p class="aligned-text"><span><strong>NIM </strong></span><?php echo $row_pengguna['nim']; ?></p>
-                <p class="aligned-text"><span><strong>Program Studi </strong></span><?php echo $row_pengguna['prodi']; ?></p>
+                <div class="info-table">
+                    <div class="info-row">
+                        <div class="info-cell info-cell-left"><strong>Nama</strong></div>
+                        <div class="info-cell"><?php echo $row_pengguna['nama']; ?></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-cell info-cell-left"><strong>NIM</strong></div>
+                        <div class="info-cell"><?php echo $row_pengguna['nim']; ?></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-cell info-cell-left"><strong>Program Studi</strong></div>
+                        <div class="info-cell"><?php echo $row_pengguna['prodi']; ?></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="info-bubble">
