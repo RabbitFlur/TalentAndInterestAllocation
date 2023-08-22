@@ -24,6 +24,7 @@ td {
 </style>
 <body>
     <div class="homepage">
+    <div class="homepage-background">
         <div class="info-bubble">
             <div class="user-info">
                 <h3 class="judul">Data Pengguna</h3>
@@ -46,6 +47,7 @@ td {
         <div class="info-bubble">
             <div class="history">
                 <h3 class="judul">Riwayat</h3>
+                <div class="table-container">
                 <table>
                     <tr>
                         <th>Tanggal</th>
@@ -60,13 +62,14 @@ td {
                         </tr>
                     <?php endwhile; ?>
                 </table>
+                </div>
             </div>
         </div>
-        <br>
         <button class="button-tes" onclick="window.location.href='question.php'">Mulai Tes</button>
         <div class="logout-container">
             <a class="logout-link" href="../controller/logout.php">Logout</a>
         </div>
+    </div>
     </div>
 </body>
 </html>
