@@ -19,6 +19,7 @@ $user_name = $_SESSION['nama'];
 </head>
 <body>
 <div class="form-wrapper">
+<div class="form-content">
 <form id="questionForm" action="hasiloutput.php" method="POST">
 <h2><img src="../image/tia.png" alt="Gambar" style="max-width: 100%; height: auto;"></h2>
 <!-- _______________FIELDSET 1________________ -->
@@ -294,6 +295,7 @@ $user_name = $_SESSION['nama'];
 <script src="../modules/hidden.js"></script>
 <script src="../modules/nextfieldset.js"></script>
 <script src="../modules/outputjawaban.js" type="module"></script>
+</div>
 </div>
 
 <?php include '../template/footer.php'; ?>
