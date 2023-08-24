@@ -666,7 +666,7 @@ table {
  
  /* Styling for the header section */
  .homepageadmin-background {
-    background-color: #00255560;
+    background-color: #0025555b;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -716,4 +716,23 @@ table {
  .container-data label {
     font-weight: bold;
  }
+
+ /* tombol exit */
+.logout-link {
+  position: absolute;
+  top: 10px; /* adjust as needed */
+  right: 10px; /* adjust as needed */
+  z-index: 9999;
+}
+
+.logout-logo {
+  width: 30px; /* adjust as needed */
+  height: 30px; /* adjust as needed */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.logout-link:hover .logout-logo {
+transform: scale(1.1); /* scale up the logo on hover */
+filter: hue-rotate(120deg);
+}
 /* ------------------------------------------------------------------- */

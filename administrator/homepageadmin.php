@@ -2,21 +2,53 @@
 <?php include '../template/header.php'; ?>
 <title>Homepage Admin</title>
     <style>
+        
+    /* .search-input {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
+    .search-input input[type="text"] {
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        color: white;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .search-input input[type="submit"] {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+    } */
     </style>
 </head>
 <body>
+    <a class="logout-link" href="../controller/logout_admin.php">
+        <img class="logout-logo" src="../image/exit-sign-icon.png" alt="Logout">
+    </a>
     <div class="homepageadmin">
         <div class="homepageadmin-background">
             <h1>Data Peserta</h1>
             
             <div class="container-data">
                 <div class="search-input">
-                    <form method="GET">
+                    <!-- <form method="GET"> -->
                         <!-- <label for="nim">Cari berdasarkan NIM:</label> -->
-                        <input type="text" id="nim" name="nim" placeholder="Tuliskan NIM"> 
-                        <input type="submit" value="Cari">
-                    </form>
+                        <!-- <input type="text" id="nim" name="nim" placeholder="Tuliskan NIM"> 
+                        <input type="submit" value="Cari"> -->
+                    <!-- </form> -->
+                    <form method="GET" class="mb-3 d-flex">
+                    <div class="input-group me-2">
+                        <input type="text" id="nim" name="nim" class="form-control border-bottom-0" placeholder="Tuliskan NIM" style="background-color: transparent; color: white;">
+                    </div>
+                    <button class="btn btn-dark border-bottom-0" type="submit">Cari</button>
+                </form>
                 </div>
                 
                 <table class="tabel-data">
@@ -47,7 +79,6 @@
                                 echo "<td>" . $row['kabko'] . "</td>";
                                 echo "<td>" . $row['hp'] . "</td>";
                                 echo "<td>" . $row['kecenderungan'] . "</td>";
-
                                 echo "</tr>";
                             }
                         } else {
@@ -55,38 +86,16 @@
                         }
                     ?>
                 </table>
-                 
                 <div class="pagination">
-                    <?php
-                    $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-                    // Logic untuk membatasi tampilan maksimal 3 angka halaman:
-                    $start_page = max(1, $current_page - 1);
-                    $end_page = min($start_page + 2, $total_pages);
-
-                    // Tampilkan navigasi First Page dan Previous Page:
-                    if ($current_page > 1) {
-                        echo "<a href='?page=1'>&laquo; First</a>";
-                        echo "<a href='?page=".($current_page - 1)."'>Previous</a>";
-                    }
-
-                    // Tampilkan tautan untuk halaman-halaman terbatas (maksimal 3 angka):
-                    for ($i = $start_page; $i <= $end_page; $i++) {
-                        echo "<a href='?page=".$i."' class='".($i == $current_page ? 'active' : '')."'>".$i."</a>";
-                    }
-
-                    // Tampilkan navigasi Next Page dan Last Page:
-                    if ($current_page < $total_pages) {
-                        echo "<a href='?page=".($current_page + 1)."'>Next</a>";
-                        echo "<a href='?page=".$total_pages."'>Last &raquo;</a>";
-                    }
-                    ?>
-                </div>    
-                <!-- <a class="logout" href="../controller/logout_admin.php">Logout</a> -->
-            </div>
+                <?php include '../controller/paginationtable.php'?>
+                </div>
+               </div>
         </div>
     </div>
-</body>
 <script>
+
 </script>
+ 
+</body>
+
 </html>

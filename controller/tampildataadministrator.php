@@ -15,7 +15,7 @@ include '../config/koneksi.php';
 // Pengecekan jika parameter NIM dikirimkan
 $nimFilter = isset($_GET['nim']) ? $_GET['nim'] : '';
 
-$results_per_page = 2; // Jumlah hasil per halaman
+$results_per_page = 5; // Jumlah hasil per halaman
 
 $query = "SELECT COUNT(*) AS total FROM hasil_formulir";
 $result = mysqli_query($conn, $query);
