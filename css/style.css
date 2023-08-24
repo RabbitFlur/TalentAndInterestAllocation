@@ -563,3 +563,157 @@ table {
 .info-cell-left {
   background-color: rgba(12, 101, 136, 0.247); /* Warna yang lebih gelap untuk kolom sebelah kiri */
 }
+
+
+/* ------------------------Style Page Admin--------------------------- */
+/* Styling for the total records section */
+.total-records {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+ }
+ 
+
+ /* Pagination */
+ .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination a,
+.pagination span {
+  padding: 5px 10px;
+  margin: 0 2px;
+  text-decoration: none;
+  color: #caddfa; /* Warna putih untuk teks tautan */
+  font-size: 13px;
+  background-color: transparent;
+}
+
+.pagination a:hover {
+  color: #3d8567;
+}
+
+.pagination a.active {
+  font-weight:bolder;
+  background-color: #e67e22; /* Warna orange tua untuk tautan aktif */
+  border-radius: 4px;
+}
+
+
+ /* Styling for the logout link */
+ .logout {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+ }
+ 
+ /* Styling for the table */
+ .tabel-data {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 13px;
+ }
+ 
+ /* Alternate row colors */
+ .tabel-data tr:nth-child(even) {
+    background-color: #f2f2f2d0;
+ }
+ 
+ .tabel-data tr:nth-child(odd) td:not(.date):not(.time) {
+    background-color: #def0ffe5; /* Warna latar belakang untuk baris genap */ 
+ }
+ 
+ /* Header styling */
+ .tabel-data th{
+    background-color: #011e3dc4;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+ }
+ 
+ .tabel-data th,
+ .tabel-data td {
+    padding: 10px;
+    border: 1px solid #48d5dfd5; /* Tambahkan batas pada sel */
+ }
+ 
+ /* Hover effect */
+ .tabel-data .tdhover:hover {
+    background-color: #e2e8f0;
+ }
+ 
+ /* Format date and time */
+ .tabel-data td.date,
+ .tabel-data td.time {
+    background-color: #1b819b77; /* Warna latar belakang lebih gelap */
+    color: #526aaa; /* Warna teks lebih terang */
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+ }
+ 
+ .tabel-data td.fixrow {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
+ }
+ 
+ /* Styling for the header section */
+ .homepageadmin-background {
+    background-color: #00255560;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    overflow: hidden;
+ }
+ 
+ .homepageadmin h1 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: left;
+    color: #c2bdbd;
+ }
+ 
+ .container-data {
+    margin-top: 20px;
+    max-height: 80vh;
+    overflow: auto;
+    position: relative;
+ }
+ 
+ /* Gaya untuk bentuk overflow */
+ .container-data::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+    border-radius: 4px; /* Sudut bundar scrollbar */
+ }
+ 
+ .container-data::-webkit-scrollbar-thumb {
+    background-color: #265e8b2c; /* Warna thumb scrollbar */
+    border-radius: 4px; /* Sudut bundar thumb scrollbar */
+ }
+ 
+ .container-data::-webkit-scrollbar-track {
+    background-color: transparent; /* Warna track scrollbar */
+ }
+ 
+ /* Additional styles for the search form */
+ .container-data form {
+    margin-bottom: 15px;
+ }
+ 
+ .container-data label {
+    font-weight: bold;
+ }
+/* ------------------------------------------------------------------- */

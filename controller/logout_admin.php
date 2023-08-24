@@ -3,7 +3,7 @@ session_start();
 
 // Jika pengguna belum login, arahkan ke halaman login
 if (!isset($_SESSION['id'])) {
-    header("Location: ../admin/administrator.php");
+    header("Location: ../administrator/home.php");
     exit();
 }
 
@@ -11,6 +11,6 @@ if (!isset($_SESSION['id'])) {
 session_destroy();
 
 // Alihkan pengguna kembali ke halaman administrator
-header("Location: ../admin/administrator.php");
+header("Location: ../administrator/home.php");
 exit();
 ?>

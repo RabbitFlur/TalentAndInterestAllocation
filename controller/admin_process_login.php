@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $conn->close();
             
             // Alihkan ke halaman admin setelah login sukses
-            header("Location: ../admin/homepageadmin.php");
+            header("Location: ../administrator/homepageadmin.php");
             exit();
         }
     }
@@ -39,11 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Jika login gagal, arahkan kembali ke halaman login
     $stmt->close();
     $conn->close();
-    header("Location: ../admin/administrator.php");
+    header("Location: ../administrator/home.php");
     exit();
 } else {
     // Jika halaman ini diakses secara langsung, arahkan kembali ke halaman login
-    header("Location: administrator.php");
+    header("Location: home.php");
     exit();
 }
 ?>
