@@ -611,7 +611,8 @@ table {
     color: #007bff;
     text-decoration: none;
  }
- 
+
+
  /* Styling for the table */
  .tabel-data {
     width: 100%;
@@ -718,21 +719,58 @@ table {
  }
 
  /* tombol exit */
-.logout-link {
+.logoutadmin-link {
   position: absolute;
   top: 10px; /* adjust as needed */
   right: 10px; /* adjust as needed */
   z-index: 9999;
 }
 
-.logout-logo {
+.logoutadmin-logo {
   width: 30px; /* adjust as needed */
   height: 30px; /* adjust as needed */
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.logout-link:hover .logout-logo {
+.logoutadmin-link:hover .logoutadmin-logo {
 transform: scale(1.1); /* scale up the logo on hover */
 filter: hue-rotate(120deg);
+}
+
+/* CSS styling for the search bar */
+.search-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.search-box {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;            
+  transition: border-color 0.3s ease-in-out;
+}
+.search-box:hover {
+  border-color: #e78e44;
+}
+.search-box:focus{
+  outline: none;
+  border-color: #3a86ff;
+  box-shadow: 0 0 5px rgba(58, 134, 255, 0.3);
+}
+
+#search {
+  background-color: #1a5e88;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi hover */
+}
+#search:hover {
+  background-color: #104e75;
+}
+#reset{
+  cursor: pointer;
 }
 /* ------------------------------------------------------------------- */

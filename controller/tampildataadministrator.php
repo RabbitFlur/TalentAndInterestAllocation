@@ -17,12 +17,19 @@ $nimFilter = isset($_GET['nim']) ? $_GET['nim'] : '';
 
 $results_per_page = 5; // Jumlah hasil per halaman
 
-$query = "SELECT COUNT(*) AS total FROM hasil_formulir";
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_assoc($result);
-$total_results = $row['total'];
+// $query = "SELECT COUNT(*) AS total FROM hasil_formulir";
+$query = "SELECT COUNT(*) AS total FROM pengguna JOIN hasil_formulir
+    ON pengguna.id = hasil_formulir.id_pengguna 
+    WHERE (linguistik = 1 OR logis_matematis = 1 OR kinestetik = 1 
+    OR musikal = 1 OR interpersonal = 1 OR intrapersonal = 1)
+    AND pengguna.nim LIKE '%$nimFilter%'";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+// $total_results = $row['total'];
+    $total_results_filtered = $row['total'];
 
-$total_pages = ceil($total_results / $results_per_page);
+// $total_pages = ceil($total_results / $results_per_page);
+$total_pages = ceil($total_results_filtered / $results_per_page);
 
 if (!isset($_GET['page'])) {
     $page = 1;
