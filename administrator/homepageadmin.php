@@ -3,10 +3,6 @@
 
 
 <title>Homepage Admin</title>
-    <style>
-       
-
-    </style>
 </head>
 <body>
     <a class="logoutadmin-link" href="../controller/logout_admin.php">
@@ -18,11 +14,14 @@
             <div class="container-data">
             <div class="search-container">
                 <form method="GET">  
-                    <span id="reset" onclick="resetTable()">❌</span>                  
+                    <span id="reset" onclick="resetTable()">
+                        <img src="../image/reset.png" alt="Reset" width="20" height="20">
+                    </span>                 
                     <input type="text" id="nim" name="nim" class="search-box" placeholder="Cari NIM..." value="<?php echo $nimFilter; ?>">
                     <span id="search" onclick="filterTableByNIM()">Cari</span>                    
                 </form>
             </div>
+            <a id="download-csv" href="download_csv.php?nim=<?php echo $nimFilter; ?>">Unduh CSV</a>
             <table class="tabel-data">
                 <tr>
                     <th>Tanggal</th>
