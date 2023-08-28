@@ -29,6 +29,7 @@ $query_hasil_formulir = "SELECT id, tanggal_waktu,
                          FROM hasil_formulir
                          WHERE id_pengguna = $user_id
                          AND (linguistik = 1 OR logis_matematis = 1 OR kinestetik = 1 
-                              OR musikal = 1 OR interpersonal = 1 OR intrapersonal = 1)";
+                              OR musikal = 1 OR interpersonal = 1 OR intrapersonal = 1)
+                              ORDER BY tanggal_waktu DESC";
 $result_hasil_formulir = mysqli_query($conn, $query_hasil_formulir);
 ?>
