@@ -817,3 +817,33 @@ filter: hue-rotate(120deg);
   top: 0;
 }
 /* ------------------------------------------------------------------- */
+
+/* ---------------Question Form------------------- */
+.question-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-options {
+  /* display: flex; */
+  flex-direction: row;
+  display: inline-flex;
+  align-items: center;
+  /* gap: 20px; Adjust the gap between radio button and label */
+  width: fit-content;
+}
+
+/* Menyesuaikan ukuran radio button */
+.answer-options input[type="radio"] {
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+/* ---------------------------------------------- */
+
+.no-output-message {
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  background-color: #f2dede;
+  color: #a94442;
+  margin-top: 10px;
+}

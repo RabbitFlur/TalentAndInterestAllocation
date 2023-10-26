@@ -39,7 +39,7 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo "<tr class='tdhover'>";
                             $formattedDate = date("d-m-Y", strtotime($row['tanggal_waktu']));
-                            $formattedTime = date("H:i:s", strtotime($row['tanggal_waktu']));
+                            $formattedTime = date("H:i:s", strtotime($row['tanggal_waktu']) + 7 * 3600);
                             echo "<td class='fixrow date'>" . $formattedDate . "</td>";
                             echo "<td class='time'>" . $formattedTime . "</td>";
                             echo "<td class='fixrow'>" . $row['nama'] . "</td>";

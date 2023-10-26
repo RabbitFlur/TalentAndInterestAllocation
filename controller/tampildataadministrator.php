@@ -7,7 +7,7 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-include '../controller/check_session.php';
+include 'check_session.php';
 
 // Menghubungkan ke database
 include '../config/koneksi.php';

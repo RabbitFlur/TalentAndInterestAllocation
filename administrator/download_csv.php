@@ -47,7 +47,7 @@ fputcsv($output, $header);
 // Menulis data ke dalam file CSV
 while ($row = mysqli_fetch_assoc($result)) {
     $formattedDate = date("d-m-Y", strtotime($row['tanggal_waktu']));
-    $formattedTime = date("H:i:s", strtotime($row['tanggal_waktu']));
+    $formattedTime = date("H:i:s", strtotime($row['tanggal_waktu']) + 7 * 3600);
     $data = array(
         $formattedDate,
         $formattedTime,

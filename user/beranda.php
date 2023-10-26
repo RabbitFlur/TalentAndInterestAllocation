@@ -1,4 +1,5 @@
 <?php include '../controller/tampildatapengguna.php'?>
+
 <?php include '../template/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <title>Beranda</title>
@@ -57,7 +58,7 @@ td {
                     <?php while ($row_formulir = mysqli_fetch_assoc($result_hasil_formulir)) : ?>
                         <tr>
                             <td><?php echo date('d-m-Y', strtotime($row_formulir['tanggal_waktu'])); ?></td>
-                            <td><?php echo date('H:i:s', strtotime($row_formulir['tanggal_waktu'])); ?></td>
+                            <td><?php echo date('H:i:s', strtotime($row_formulir['tanggal_waktu'])+ 7 * 3600); ?></td>
                             <td><?php echo $row_formulir['kecenderungan']; ?></td>
                         </tr>
                     <?php endwhile; ?>

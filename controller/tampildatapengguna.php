@@ -8,6 +8,8 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     exit();
 }
 
+include 'check_sessionuser.php';
+
 $user_id = $_SESSION['id'];
 $user_name = $_SESSION['nama'];
 

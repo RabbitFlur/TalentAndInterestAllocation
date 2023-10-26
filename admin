@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Example</title>
+    <meta http-equiv="refresh" content="0; url=administrator/home.php">
+</head>
+<body>
+    <p>Jika Anda tidak diarahkan, klik <a href="administrator/home.php">di sini</a>.</p>
+</body>
+</html>
